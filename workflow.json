@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "PR Code Changes",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "pr_review_agent",
+      "type": "Agent",
+      "label": "PR Review Agent",
+      "nodeCategory": "agent"
+    },
+    {
+      "id": "output_node",
+      "type": "Output",
+      "label": "Review Feedback",
+      "nodeCategory": "end"
+    }
+  ],
+  "edges": [
+    {
+      "source": "input_node",
+      "target": "pr_review_agent"
+    },
+    {
+      "source": "pr_review_agent",
+      "target": "output_node"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "agent_name": "PR Review Agent",
+  "agent_id": "69b0772e683a2db13f977b9c",
+  "description": "An AI agent that analyzes GitHub pull request code changes for code quality, security vulnerabilities, performance issues, and best practice violations. It provides structured feedback with severity levels and actionable suggestions.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "overall_score": "number",
+    "recommendation": "string",
+    "summary": "string",
+    "code_quality": {
+      "score": "number",
+      "findings": [
+        {
+          "severity": "string",
+          "file": "string",
+          "line": "string",
+          "issue": "string",
+          "suggestion": "string"
+        }
+      ]
+    },
+    "security": {
+      "score": "number",
+      "findings": [
+        {
+          "severity": "string",
+          "file": "string",
+          "line": "string",
+          "issue": "string",
+          "suggestion": "string"
+        }
+      ]
+    },
+    "performance": {
+      "score": "number",
+      "findings": [
+        {
+          "severity": "string",
+          "file": "string",
+          "line": "string",
+          "issue": "string",
+          "suggestion": "string"
+        }
+      ]
+    },
+    "breaking_changes": {
+      "score": "number",
+      "findings": [
+        {
+          "severity": "string",
+          "file": "string",
+          "line": "string",
+          "issue": "string",
+          "suggestion": "string"
+        }
+      ]
+    },
+    "best_practices": {
+      "score": "number",
+      "findings": [
+        {
+          "severity": "string",
+          "file": "string",
+          "line": "string",
+          "issue": "string",
+          "suggestion": "string"
+        }
+      ]
+    }
+  },
+  "example_response": {
+    "overall_score": 0,
+    "recommendation": "approve, request_changes, or needs_discussion",
+    "summary": "Brief overall summary of the review",
+    "code_quality": {
+      "score": 0,
+      "findings": [
+        {
+          "severity": "sample string",
+          "file": "sample string",
+          "line": "sample string",
+          "issue": "sample string",
+          "suggestion": "sample string"
+        }
+      ]
+    },
+    "security": {
+      "score": 0,
+      "findings": [
+        {
+          "severity": "sample string",
+          "file": "sample string",
+          "line": "sample string",
+          "issue": "sample string",
+          "suggestion": "sample string"
+        }
+      ]
+    },
+    "performance": {
+      "score": 0,
+      "findings": [
+        {
+          "severity": "sample string",
+          "file": "sample string",
+          "line": "sample string",
+          "issue": "sample string",
+          "suggestion": "sample string"
+        }
+      ]
+    },
+    "breaking_changes": {
+      "score": 0,
+      "findings": [
+        {
+          "severity": "sample string",
+          "file": "sample string",
+          "line": "sample string",
+          "issue": "sample string",
+          "suggestion": "sample string"
+        }
+      ]
+    },
+    "best_practices": {
+      "score": 0,
+      "findings": [
+        {
+          "severity": "sample string",
+          "file": "sample string",
+          "line": "sample string",
+          "issue": "sample string",
+          "suggestion": "sample string"
+        }
+      ]
+    }
+  },
+  "has_module_outputs": true,
+  "module_outputs_example": {
+    "artifact_files": [
+      {
+        "file_url": "https://example.com/file.pdf"
+      }
+    ]
+  }
+}

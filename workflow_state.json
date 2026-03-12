@@ -1,0 +1,20 @@
+{
+  "agents": [
+    {
+      "agent_id": "69b0772e683a2db13f977b9c",
+      "name": "PR Review Agent",
+      "node_id": "pr_review_agent",
+      "provider_id": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 0.9,
+      "agent_type": "json",
+      "has_image_output": false,
+      "has_voice": false,
+      "has_file_output": false,
+      "has_knowledge_base": false
+    }
+  ],
+  "schedules": [],
+  "knowledge_bases": []
+}

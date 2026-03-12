@@ -1,0 +1,149 @@
+{
+  "agent_name": "PR Review Agent",
+  "agent_id": "69b0772e683a2db13f977b9c",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "PRReviewResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "overall_score": {
+            "type": "number",
+            "description": "Overall review score from 1-10"
+          },
+          "recommendation": {
+            "type": "string",
+            "description": "approve, request_changes, or needs_discussion"
+          },
+          "summary": {
+            "type": "string",
+            "description": "Brief overall summary of the review"
+          },
+          "code_quality": {
+            "type": "object",
+            "properties": {
+              "score": { "type": "number" },
+              "findings": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "severity": { "type": "string" },
+                    "file": { "type": "string" },
+                    "line": { "type": "string" },
+                    "issue": { "type": "string" },
+                    "suggestion": { "type": "string" }
+                  },
+                  "required": ["severity", "file", "line", "issue", "suggestion"],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": ["score", "findings"],
+            "additionalProperties": false
+          },
+          "security": {
+            "type": "object",
+            "properties": {
+              "score": { "type": "number" },
+              "findings": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "severity": { "type": "string" },
+                    "file": { "type": "string" },
+                    "line": { "type": "string" },
+                    "issue": { "type": "string" },
+                    "suggestion": { "type": "string" }
+                  },
+                  "required": ["severity", "file", "line", "issue", "suggestion"],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": ["score", "findings"],
+            "additionalProperties": false
+          },
+          "performance": {
+            "type": "object",
+            "properties": {
+              "score": { "type": "number" },
+              "findings": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "severity": { "type": "string" },
+                    "file": { "type": "string" },
+                    "line": { "type": "string" },
+                    "issue": { "type": "string" },
+                    "suggestion": { "type": "string" }
+                  },
+                  "required": ["severity", "file", "line", "issue", "suggestion"],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": ["score", "findings"],
+            "additionalProperties": false
+          },
+          "breaking_changes": {
+            "type": "object",
+            "properties": {
+              "score": { "type": "number" },
+              "findings": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "severity": { "type": "string" },
+                    "file": { "type": "string" },
+                    "line": { "type": "string" },
+                    "issue": { "type": "string" },
+                    "suggestion": { "type": "string" }
+                  },
+                  "required": ["severity", "file", "line", "issue", "suggestion"],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": ["score", "findings"],
+            "additionalProperties": false
+          },
+          "best_practices": {
+            "type": "object",
+            "properties": {
+              "score": { "type": "number" },
+              "findings": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "severity": { "type": "string" },
+                    "file": { "type": "string" },
+                    "line": { "type": "string" },
+                    "issue": { "type": "string" },
+                    "suggestion": { "type": "string" }
+                  },
+                  "required": ["severity", "file", "line", "issue", "suggestion"],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": ["score", "findings"],
+            "additionalProperties": false
+          }
+        },
+        "required": ["overall_score", "recommendation", "summary", "code_quality", "security", "performance", "breaking_changes", "best_practices"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "sample_fields": ["overall_score", "recommendation", "summary", "code_quality", "security", "performance", "breaking_changes", "best_practices"]
+}
